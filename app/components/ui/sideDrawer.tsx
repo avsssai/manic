@@ -9,7 +9,7 @@ import {
   Radio,
   User,
 } from "lucide-react";
-import { Drawer, DrawerContent, DrawerTrigger } from "./drawer";
+import { Drawer, DrawerClose, DrawerContent, DrawerTrigger } from "./drawer";
 import {
   Accordion,
   AccordionContent,
@@ -17,7 +17,6 @@ import {
   AccordionTrigger,
 } from "./accordion";
 import { Link, NavLink } from "@remix-run/react";
-import { cn } from "~/lib/utils";
 
 export function SideDrawer() {
   return (
@@ -27,7 +26,9 @@ export function SideDrawer() {
       </DrawerTrigger>
       <DrawerContent className="p-2">
         <div className="mb-6 text-left">
-          <ArrowLeftIcon />
+          <DrawerClose>
+            <ArrowLeftIcon />
+          </DrawerClose>
         </div>
         <Accordion collapsible type="single" className="mb-4 w-full">
           <AccordionItem value="menu">

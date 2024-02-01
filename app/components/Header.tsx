@@ -1,11 +1,12 @@
 import { useMediaQuery } from "~/hooks/useMediaQuery";
 import { SideDrawer } from "./ui/sideDrawer";
+import { Music } from "lucide-react";
 
 export default function Header() {
   const tabletAndBelow = useMediaQuery(`(max-width: 768px)`);
   console.log(tabletAndBelow);
   return (
-    <main className="flex space-x-2 border border-b-2 px-4 py-2">
+    <main className="flex items-center space-x-2 border border-b-2 px-4 py-2">
       {tabletAndBelow ? (
         <span>
           <SideDrawer />
@@ -13,7 +14,10 @@ export default function Header() {
       ) : (
         ""
       )}
-      <h4 className="text-lg font-bold tracking-wide">Manic</h4>
+      <h4 className="flex w-fit items-center rounded-sm border-2 border-foreground p-1 text-lg font-extrabold tracking-wide text-foreground shadow-md">
+        <Music className="mr-1" /> Manic
+      </h4>
+      <nav className="flex space-x-2"></nav>
     </main>
   );
 }
