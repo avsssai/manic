@@ -4,7 +4,6 @@ import { Music } from "lucide-react";
 
 export default function Header() {
   const tabletAndBelow = useMediaQuery(`(max-width: 768px)`);
-  console.log(tabletAndBelow);
   return (
     <main className="flex items-center space-x-2 border border-b-2 px-4 py-2">
       {tabletAndBelow ? (
