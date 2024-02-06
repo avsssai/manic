@@ -11,13 +11,12 @@ export const meta: MetaFunction = () => {
 
 export default function Index() {
   return (
-    <div className="p-4">
+    <div className="relative p-4">
       <section className="mb-4">
         <h1 className="mb-2 text-2xl font-black">Chartbusters</h1>
         <p className="text-sm text-muted-foreground">
           The top songs from all over the world.
         </p>
-        <SoundBar songUrl={tnt} />
       </section>
       <section className="mb-4">
         <h1 className="mb-2 text-2xl font-black">Hot Artists</h1>

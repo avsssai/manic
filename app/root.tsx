@@ -30,6 +30,8 @@ import Header from "~/components/Header";
 import { ListItem } from "~/components/ListItem";
 import { Button } from "~/components/ui/button";
 import { useMediaQuery } from "~/hooks/useMediaQuery";
+import SoundBar from "./components/SoundBar";
+import tnt from "~/music/tnt.mp3";
 
 export const links: LinksFunction = () => [
   {
@@ -147,12 +149,12 @@ export function App() {
             ) : (
               ""
             )}
-            <main className="flex-1">
+            <main className="relative w-full flex-1">
+              <SoundBar songUrl={tnt} />
               <Outlet />
             </main>
           </div>
         </div>
-        <Outlet />
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
